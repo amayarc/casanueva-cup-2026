@@ -1571,3 +1571,51 @@ h2, h3 { color: var(--gold) !important; }
 /* Hero decoraciones (balón y trofeo) más visibles */
 .hero-deco-l, .hero-deco-r { opacity: 0.28 !important; }
 .hero-orange .hero-deco-r { opacity: 0.35 !important; }
+
+/* ============= Fix de contraste: textos que quedaron en verde oscuro ============= */
+/* Lista de votos del Campeón */
+.equipo, .equipo-nombre { color: var(--text) !important; font-weight: 700; }
+.pct { color: var(--gold) !important; font-weight: 800; }
+.campeon-detalle-title, .campeon-detalle h3 { color: var(--gold) !important; }
+
+/* Por persona */
+.persona-name { color: var(--text) !important; font-weight: 800; }
+.persona-stat .num { color: var(--gold) !important; }
+.persona-stat .lbl { color: var(--muted) !important; }
+.pred-result, .pred-mine { color: var(--text) !important; }
+
+/* Pills del header */
+.pill { color: var(--text) !important; }
+
+/* Hero subtitle: sobre fondo dorado (BONUS · 10 PTS), texto verde oscuro */
+.hero-sub { color: #122019 !important; font-weight: 800; }
+/* Pero cuando el hero-sub está en un id distinto (Mundial: "52/72 partidos") va a la pill dorada,
+   ahí también queda con verde oscuro. OK para ambos. */
+
+/* Captura panel */
+.capt-instructions, .capt-instructions p, .capt-instructions strong,
+.capt-instructions li { color: var(--text) !important; }
+.capt-section h3 { color: var(--gold) !important; }
+.capt-bonus-grid label, .capt-bonus-grid > div > label { color: var(--text) !important; }
+.capt-partido-meta { color: var(--muted) !important; }
+.capt-partido-teams { color: var(--text) !important; font-weight: 600; }
+
+/* Login card */
+.login-card h3 { color: var(--gold) !important; }
+.login-card p { color: var(--muted) !important; }
+
+/* Bota de Oro */
+.bota-table th { color: var(--gold) !important; }
+.bota-table td, .bota-table .col-jugador { color: var(--text) !important; }
+.bota-actual-title { color: var(--gold) !important; }
+
+/* Partidos: predicciones */
+.pred-item, .pred-item span { color: var(--text); }
+.partido-num { color: var(--muted); }
+
+/* Sub-tabs ya OK pero asegurar */
+.sub-tab { color: var(--muted) !important; }
+.sub-tab.active { color: #122019 !important; }
+
+/* Updated text */
+.updated-text, p.updated { color: var(--muted) !important; }
