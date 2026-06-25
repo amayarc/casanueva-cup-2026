@@ -1405,8 +1405,36 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.7; }
 .bracket-conf { background: var(--green); color: #FFFFFF; }
 
 /* Sub-tabs (Grupos / Bracket / Bota) */
-.sub-tab { color: var(--muted); }
-.sub-tab.active { color: var(--gold); border-bottom-color: var(--gold); background: rgba(212,165,60,0.10); }
+/* Sub-tabs (Grupos / Bracket / Bota de Oro) */
+.sub-tabs {
+  display: flex;
+  gap: 6px;
+  background: var(--card);
+  padding: 6px;
+  border-radius: 10px;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.sub-tab {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.sub-tab:hover { background: rgba(212,165,60,0.12); color: var(--gold); }
+.sub-tab.active {
+  background: var(--gold);
+  color: #122019;
+  font-weight: 800;
+}
 
 /* Hero blocks */
 .hero-bonus.hero-blue   { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border: 2px solid var(--gold); color: var(--text); }
@@ -1437,5 +1465,31 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.7; }
 .partido-info { color: var(--muted); }
 .info, .updated { color: var(--muted); }
 .filter-row label { color: var(--text); }
-h2, h3 { color: var(--gold); }
 footer { color: var(--muted); }
+
+/* ============= TÍTULOS: forzar dorado en todos los headings ============= */
+.tab-content h2,
+.regla-card h3,
+.login-card h3,
+.capt-section h3,
+.grupo-card h3,
+.partidos-day h3,
+.duelos-header,
+h2, h3 { color: var(--gold) !important; }
+
+/* "Marcador exacto, etc." en cards de Reglas */
+.regla-card h3 { color: var(--gold) !important; }
+.regla-card { border-top-color: var(--gold) !important; }
+.regla-card.highlight { border-top-color: var(--green) !important; }
+
+/* "HOY · MIÉ 24 JUN": fondo verde tarjeta, no crema */
+.partidos-day.day-today {
+  background: linear-gradient(135deg, rgba(212,165,60,0.18) 0%, rgba(63,166,106,0.12) 100%) !important;
+  border: 2px solid var(--gold) !important;
+}
+.partidos-day.day-today h3 { color: var(--gold) !important; }
+.partidos-day h3 { color: var(--gold) !important; }
+
+/* Hero decoraciones (balón y trofeo) más visibles */
+.hero-deco-l, .hero-deco-r { opacity: 0.28 !important; }
+.hero-orange .hero-deco-r { opacity: 0.35 !important; }
