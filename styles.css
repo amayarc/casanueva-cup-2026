@@ -1490,6 +1490,84 @@ h2, h3 { color: var(--gold) !important; }
 .partidos-day.day-today h3 { color: var(--gold) !important; }
 .partidos-day h3 { color: var(--gold) !important; }
 
+/* ============= Bracket: layouts duales ============= */
+/* Por defecto (móvil/tablet): mostrar vertical, ocultar simétrico */
+.bracket-vertical { display: block; }
+.bracket-symmetric { display: none; }
+
+/* Desktop ≥1000px: simétrico tipo FIFA, oculta vertical */
+@media (min-width: 1000px) {
+  .bracket-vertical { display: none; }
+  .bracket-symmetric {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 14px;
+    align-items: stretch;
+    margin: 16px 0;
+  }
+  .bracket-half {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .bracket-half-right { direction: ltr; }
+  .bracket-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 0 8px;
+  }
+  .bracket-trophy {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 4px 12px rgba(212,165,60,0.6));
+    animation: trophy-glow 3s ease-in-out infinite;
+  }
+  @keyframes trophy-glow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  .bracket-col-final {
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 10px;
+    background: linear-gradient(180deg, rgba(212,165,60,0.18) 0%, var(--card) 80%);
+    box-shadow: 0 4px 16px rgba(212,165,60,0.3);
+  }
+  .bracket-symmetric .bracket-col {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 8px;
+  }
+  .bracket-symmetric .bracket-col-title {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .bracket-symmetric .bracket-stage-info {
+    font-size: 0.7rem;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .bracket-symmetric .bracket-match {
+    padding: 6px 8px;
+    font-size: 0.78rem;
+  }
+  .bracket-symmetric .bracket-name {
+    font-size: 0.78rem;
+  }
+  .bracket-symmetric .bracket-meta {
+    font-size: 0.62rem;
+    padding-top: 3px;
+    margin-top: 3px;
+  }
+}
+
 /* Hero decoraciones (balón y trofeo) más visibles */
 .hero-deco-l, .hero-deco-r { opacity: 0.28 !important; }
 .hero-orange .hero-deco-r { opacity: 0.35 !important; }

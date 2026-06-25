@@ -892,7 +892,6 @@ function renderMundialBracket() {
   if (!cont) return;
   const grupos = calcularGrupos();
 
-  // Construir mapa de claves: '1A' → equipo del 1° del grupo A, '2B' → 2° del grupo B
   const resolverClave = (clave) => {
     if (!clave) return null;
     const m = clave.match(/^([12])([A-L])$/);
@@ -901,7 +900,6 @@ function renderMundialBracket() {
       const letra = m[2];
       const eq = grupos[letra]?.[pos];
       if (!eq) return null;
-      // Solo "confirmado" en el bracket si su POSICIÓN ESPECÍFICA (1° o 2°) ya no puede cambiar
       return { nombre: eq.equipo, confirmado: eq.posicion_fija === true };
     }
     return null;
@@ -920,8 +918,31 @@ function renderMundialBracket() {
     if (mp) return `Perdedor Semi #${mp[1]}`;
     return clave;
   };
+  const renderTeam = (eq, claveOriginal) => {
+    if (!eq) return `<span class="bracket-flag"></span><span class="bracket-name"><span class="bracket-pending-team">${labelClave(claveOriginal)}</span></span>`;
+    const cls = eq.confirmado ? 'bracket-name confirmed' : 'bracket-name provisional';
+    const star = eq.confirmado ? ' <span class="bracket-conf">✓</span>' : '';
+    return `<span class="bracket-flag">${flag(eq.nombre)}</span><span class="${cls}">${escapeHtml(eq.nombre)}${star}</span>`;
+  };
+  const renderMatch = (p, isFinal) => {
+    const eqA = resolverClave(p.clave_a);
+    const eqB = resolverClave(p.clave_b);
+    return `
+      <div class="bracket-match pending${isFinal ? ' final' : ''}">
+        <div class="bracket-team">
+          ${renderTeam(eqA, p.clave_a)}
+          <span class="bracket-score">—</span>
+        </div>
+        <div class="bracket-team">
+          ${renderTeam(eqB, p.clave_b)}
+          <span class="bracket-score">—</span>
+        </div>
+        <div class="bracket-meta">📅 ${p.fecha} · ${p.hora} · ${escapeHtml(p.sede)}</div>
+      </div>
+    `;
+  };
 
-  // Agrupar por fase
+  // ===== Layout vertical (móvil/tablet) =====
   const fases = [
     { key: 'R32', label: 'R32',     info: '28-30 jun · 1-2 jul' },
     { key: 'OCT', label: 'Octavos', info: '4-7 jul' },
@@ -929,46 +950,76 @@ function renderMundialBracket() {
     { key: 'SEM', label: 'Semis',   info: '14-15 jul' },
     { key: 'FIN', label: '🏆 Final', info: '19 jul' },
   ];
-
-  cont.innerHTML = `
-    <div class="bracket-wrap">
+  const verticalHTML = `
+    <div class="bracket-vertical">
       <div class="bracket-board">
         ${fases.map(f => `
           <div class="bracket-col">
             <div class="bracket-col-title">${f.label}</div>
             <div class="bracket-stage-info">${f.info}</div>
-            ${ELIMINATORIAS.filter(p => p.fase === f.key).map(p => {
-              const eqA = resolverClave(p.clave_a);
-              const eqB = resolverClave(p.clave_b);
-              const renderTeam = (eq, claveOriginal) => {
-                if (!eq) return `<span class="bracket-flag"></span><span class="bracket-name"><span class="bracket-pending-team">${labelClave(claveOriginal)}</span></span>`;
-                const cls = eq.confirmado ? 'bracket-name confirmed' : 'bracket-name provisional';
-                const star = eq.confirmado ? ' <span class="bracket-conf">✓</span>' : '';
-                return `<span class="bracket-flag">${flag(eq.nombre)}</span><span class="${cls}">${escapeHtml(eq.nombre)}${star}</span>`;
-              };
-              const isFinal = f.key === 'FIN' ? ' final' : '';
-              return `
-                <div class="bracket-match pending${isFinal}">
-                  <div class="bracket-team">
-                    ${renderTeam(eqA, p.clave_a)}
-                    <span class="bracket-score">—</span>
-                  </div>
-                  <div class="bracket-team">
-                    ${renderTeam(eqB, p.clave_b)}
-                    <span class="bracket-score">—</span>
-                  </div>
-                  <div class="bracket-meta">📅 ${p.fecha} · ${p.hora} · ${escapeHtml(p.sede)}</div>
-                </div>
-              `;
-            }).join('')}
+            ${ELIMINATORIAS.filter(p => p.fase === f.key).map(p => renderMatch(p, f.key === 'FIN')).join('')}
           </div>
         `).join('')}
       </div>
     </div>
+  `;
+
+  // ===== Layout simétrico tipo FIFA (desktop) =====
+  const allByFase = {
+    R32: ELIMINATORIAS.filter(p => p.fase === 'R32'),
+    OCT: ELIMINATORIAS.filter(p => p.fase === 'OCT'),
+    CUA: ELIMINATORIAS.filter(p => p.fase === 'CUA'),
+    SEM: ELIMINATORIAS.filter(p => p.fase === 'SEM'),
+    FIN: ELIMINATORIAS.filter(p => p.fase === 'FIN'),
+  };
+  // Mitad izquierda: primera mitad de cada fase
+  // Mitad derecha: segunda mitad
+  const leftR32 = allByFase.R32.slice(0, 8);
+  const rightR32 = allByFase.R32.slice(8, 16);
+  const leftOCT = allByFase.OCT.slice(0, 4);
+  const rightOCT = allByFase.OCT.slice(4, 8);
+  const leftCUA = allByFase.CUA.slice(0, 2);
+  const rightCUA = allByFase.CUA.slice(2, 4);
+  const leftSEM = allByFase.SEM.slice(0, 1);
+  const rightSEM = allByFase.SEM.slice(1, 2);
+  const fin = allByFase.FIN[0];
+
+  const colHTML = (label, info, matches, isFinal) => `
+    <div class="bracket-col${isFinal ? ' bracket-col-final' : ''}">
+      <div class="bracket-col-title">${label}</div>
+      <div class="bracket-stage-info">${info}</div>
+      ${matches.map(p => renderMatch(p, isFinal)).join('')}
+    </div>
+  `;
+
+  const symmetricHTML = `
+    <div class="bracket-symmetric">
+      <div class="bracket-half bracket-half-left">
+        ${colHTML('R32', '28-30 jun · 1-2 jul', leftR32)}
+        ${colHTML('Octavos', '4-7 jul', leftOCT)}
+        ${colHTML('Cuartos', '9-11 jul', leftCUA)}
+        ${colHTML('Semis', '14-15 jul', leftSEM)}
+      </div>
+      <div class="bracket-center">
+        <div class="bracket-trophy">🏆</div>
+        ${fin ? colHTML('Final', '19 jul', [fin], true) : ''}
+      </div>
+      <div class="bracket-half bracket-half-right">
+        ${colHTML('Semis', '14-15 jul', rightSEM)}
+        ${colHTML('Cuartos', '9-11 jul', rightCUA)}
+        ${colHTML('Octavos', '4-7 jul', rightOCT)}
+        ${colHTML('R32', '28-30 jun · 1-2 jul', rightR32)}
+      </div>
+    </div>
+  `;
+
+  cont.innerHTML = `
+    ${verticalHTML}
+    ${symmetricHTML}
     <div class="bracket-leyenda">
-      <span><i style="background:#2E7D32"></i>Ya jugado</span>
-      <span><i style="background:#F26522"></i>Próximo partido</span>
-      <span><i style="background:#B5B5B5"></i>Pendiente (depende de fase anterior)</span>
+      <span><i style="background:#7BD9A2"></i>Ya jugado</span>
+      <span><i style="background:#D4A53C"></i>Próximo partido</span>
+      <span><i style="background:#5C7268"></i>Pendiente (depende de fase anterior)</span>
     </div>
   `;
 }
