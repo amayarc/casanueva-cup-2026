@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Casanueva Cup — Mundial 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="title-block">
+        <span class="ball">⚽</span>
+        <div>
+          <h1>Casanueva Cup</h1>
+          <p class="subtitle">Mundial 2026 · Fase de Grupos</p>
+        </div>
+      </div>
+      <div class="status-pills">
+        <span class="pill" id="pill-jugados">— jugados</span>
+        <span class="pill" id="pill-participantes">— quinielas</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="clasificacion">🏆 Clasificación</button>
+    <button class="tab" data-tab="partidos">📅 Partidos</button>
+    <button class="tab" data-tab="por-persona">👤 Por persona</button>
+    <button class="tab" data-tab="campeon">🏆 Campeón</button>
+    <button class="tab" data-tab="mundial">📊 Mundial</button>
+    <button class="tab" data-tab="reglas">📋 Reglas</button>
+    <button class="tab" data-tab="capturar">🔐 Capturar</button>
+  </nav>
+
+  <main>
+    <!-- Clasificación -->
+    <section id="tab-clasificacion" class="tab-content active">
+      <h2>Clasificación general</h2>
+      <p class="updated" id="updated-text"></p>
+      <div id="clasif-podium" class="podium"></div>
+      <div class="table-wrap">
+        <table class="rank-table">
+          <thead>
+            <tr>
+              <th>Pos</th>
+              <th>Participante</th>
+              <th>Total</th>
+              <th class="hide-mobile">Partidos</th>
+              <th class="hide-mobile">Bonus</th>
+              <th class="hide-mobile">🎯</th>
+              <th class="hide-mobile">✅</th>
+            </tr>
+          </thead>
+          <tbody id="clasif-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Partidos -->
+    <section id="tab-partidos" class="tab-content">
+      <h2>Partidos</h2>
+      <div class="filter-row">
+        <label>Día:
+          <select id="filtro-dia">
+            <option value="">Todos</option>
+          </select>
+        </label>
+      </div>
+      <div id="partidos-list"></div>
+    </section>
+
+    <!-- Por persona -->
+    <section id="tab-por-persona" class="tab-content">
+      <h2>Quiniela por participante</h2>
+      <div class="filter-row">
+        <label>Participante:
+          <select id="select-persona"></select>
+        </label>
+      </div>
+      <div id="persona-detalle"></div>
+    </section>
+
+    <!-- Campeón -->
+    <section id="tab-campeon" class="tab-content">
+      <div class="hero-bonus hero-blue">
+        <div class="hero-deco-l">⚽</div>
+        <div class="hero-deco-r">🏆</div>
+        <div class="hero-title">¿Quién será el</div>
+        <h2 class="hero-h2">CAMPEÓN <span class="hero-h2-sub">del Mundial 2026?</span></h2>
+        <p class="hero-sub">🏆 BONUS · 10 PTS</p>
+      </div>
+      <div id="campeon-pie" class="pie-block"></div>
+      <div id="campeon-detalle"></div>
+    </section>
+
+    <!-- Mundial: cómo va -->
+    <section id="tab-mundial" class="tab-content">
+      <div class="hero-bonus hero-blue">
+        <div class="hero-deco-l">⚽</div>
+        <div class="hero-deco-r">🏆</div>
+        <div class="hero-title">Cómo va el</div>
+        <h2 class="hero-h2">MUNDIAL 2026 <span class="hero-h2-sub">en vivo</span></h2>
+        <p class="hero-sub" id="mundial-stats">Cargando...</p>
+      </div>
+      <div class="sub-tabs">
+        <button class="sub-tab mundial-sub active" data-msub="grupos">📋 Grupos</button>
+        <button class="sub-tab mundial-sub" data-msub="bracket">🏆 Bracket</button>
+        <button class="sub-tab mundial-sub" data-msub="bota">🥾 Bota de Oro</button>
+      </div>
+      <div id="mundial-grupos" class="mundial-sub-content active"></div>
+      <div id="mundial-bracket" class="mundial-sub-content"></div>
+      <div id="mundial-bota" class="mundial-sub-content"></div>
+    </section>
+
+    <!-- Reglas -->
+    <section id="tab-reglas" class="tab-content">
+      <h2>Reglas</h2>
+      <div class="reglas-grid">
+        <div class="regla-card">
+          <h3>🎯 Marcador exacto</h3>
+          <p class="big">3 pts</p>
+          <p>Aciertas el resultado exacto del partido.</p>
+        </div>
+        <div class="regla-card">
+          <h3>✅ Ganador / empate</h3>
+          <p class="big">1 pt</p>
+          <p>Aciertas quién gana o que hay empate, aunque no el marcador.</p>
+        </div>
+        <div class="regla-card">
+          <h3>🏆 Bonus campeón</h3>
+          <p class="big">10 pts</p>
+          <p>Aciertas el equipo campeón del Mundial.</p>
+        </div>
+        <div class="regla-card">
+          <h3>⏱️ Tiempo reglamentario</h3>
+          <p>A partir de octavos se toma el resultado al final de los 90 min + tiempo de compensación. No cuentan tiempos extra ni penales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capturar (panel admin) -->
+    <section id="tab-capturar" class="tab-content">
+      <h2>🔐 Capturar resultados</h2>
+      <p class="info">Solo Amaya tiene la clave. Aquí se ingresan los marcadores reales de los partidos.</p>
+
+      <div id="capturar-login">
+        <div class="login-card">
+          <div class="login-icon">🔒</div>
+          <h3>Acceso restringido</h3>
+          <p>Ingresa la clave para capturar resultados</p>
+          <input type="password" id="login-pass" placeholder="Clave" autocomplete="off">
+          <button class="btn-primary" id="login-btn">Entrar</button>
+          <p class="login-error" id="login-error"></p>
+        </div>
+      </div>
+
+      <div id="capturar-panel" style="display:none;">
+        <div class="capt-instructions">
+          <p><strong>Cómo usar:</strong></p>
+          <ol>
+            <li>Llena los marcadores de los partidos jugados</li>
+            <li>Al final del Mundial, llena el Campeón real</li>
+            <li>Click <strong>"💾 Guardar en la nube"</strong> y listo</li>
+            <li>La web se actualiza automáticamente para todos en segundos</li>
+          </ol>
+        </div>
+
+        <div class="capt-section">
+          <h3>🏆 Bonus final del Mundial</h3>
+          <div class="capt-bonus-grid">
+            <div>
+              <label>Campeón real</label>
+              <input type="text" id="capt-campeon" placeholder="Ej: España">
+            </div>
+          </div>
+        </div>
+
+        <div class="capt-section">
+          <h3>🥾 Bota de Oro · Líderes actuales (informativo)</h3>
+          <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px;">Opcional. Aparece en la pestaña Mundial. Casanueva Cup no premia goleador, solo se muestra para curiosidad.</p>
+          <div>
+            <label style="font-weight:600;color:var(--text);display:block;margin-bottom:6px;font-size:0.9rem;">Fecha de actualización</label>
+            <input type="date" id="capt-bota-fecha" style="padding:8px 12px;border:2px solid var(--border);border-radius:8px;font-size:0.95rem;">
+          </div>
+          <div style="margin-top:12px;">
+            <label style="font-weight:600;color:var(--text);display:block;margin-bottom:6px;font-size:0.9rem;">Jugadores (uno por línea, formato <code>Nombre - País - Goles</code>)</label>
+            <textarea id="capt-bota-lideres" rows="5" placeholder="Folarin Balogun - Estados Unidos - 2&#10;Kai Havertz - Alemania - 2&#10;Yasin Ayari - Suecia - 2"></textarea>
+          </div>
+        </div>
+
+        <div class="capt-section">
+          <h3>📅 Resultados de partidos</h3>
+          <div class="filter-row">
+            <label>Mostrar:
+              <select id="capt-filtro">
+                <option value="hoy">📍 Solo HOY</option>
+                <option value="todos">Todos</option>
+                <option value="pendientes">Solo sin capturar</option>
+              </select>
+            </label>
+          </div>
+          <div id="capt-partidos-list"></div>
+        </div>
+
+        <div class="capt-actions">
+          <button class="btn-primary" id="btn-save">💾 Guardar en la nube</button>
+          <button class="btn-secondary" id="btn-download">⬇️ Backup JSON</button>
+          <button class="btn-secondary" id="btn-logout">Salir</button>
+        </div>
+        <p id="save-msg" class="save-msg"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Casanueva Cup · Mundial 2026 · Organiza: Amaya</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
