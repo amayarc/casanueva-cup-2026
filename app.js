@@ -807,15 +807,22 @@ function calcularGrupos() {
     // grupo terminado = todos los equipos jugaron sus 3 partidos
     const grupoTerminado = tabla.every(eq => eq.pj === 3);
     tabla.forEach((eq, idx) => {
-      const ptsMax = eq.pts + 3 * (3 - eq.pj);
-      const otros = tabla.filter(o => o.equipo !== eq.equipo);
-      const puedenSuperarme = otros.filter(o => (o.pts + 3 * (3 - o.pj)) > eq.pts).length;
-      const arribaInalcanzable = otros.filter(o => o.pts > ptsMax).length;
-      if (puedenSuperarme <= 1) eq.estado = 'confirmado';
-      else if (arribaInalcanzable >= 2) eq.estado = 'eliminado';
-      else eq.estado = 'en-curso';
-      // posicion_fija (para el bracket): solo cuando el grupo terminó completamente
-      eq.posicion_fija = grupoTerminado;
+      if (grupoTerminado) {
+        // La tabla ya está ordenada por pts/dg/gf → posición = idx
+        if (idx <= 1)      eq.estado = 'confirmado';   // top 2 → PASA
+        else if (idx === 2) eq.estado = 'tercero';      // 3° → mejor 3° posible
+        else                eq.estado = 'eliminado';
+        eq.posicion_fija = true;
+      } else {
+        const ptsMax = eq.pts + 3 * (3 - eq.pj);
+        const otros = tabla.filter(o => o.equipo !== eq.equipo);
+        const puedenSuperarme = otros.filter(o => (o.pts + 3 * (3 - o.pj)) > eq.pts).length;
+        const arribaInalcanzable = otros.filter(o => o.pts > ptsMax).length;
+        if (puedenSuperarme <= 1)         eq.estado = 'confirmado';
+        else if (arribaInalcanzable >= 2) eq.estado = 'eliminado';
+        else                              eq.estado = 'en-curso';
+        eq.posicion_fija = false;
+      }
     });
   });
   return grupos;
