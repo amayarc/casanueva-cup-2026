@@ -860,7 +860,9 @@ function renderMundialGrupos() {
                   else cls = 'eliminado';
                   const dgClass = e.dg > 0 ? 'dg-plus' : (e.dg < 0 ? 'dg-minus' : '');
                   const dgTxt = (e.dg > 0 ? '+' : '') + e.dg;
-                  const badge = e.estado === 'confirmado' ? ' <span class="badge-pasa">✓ PASA</span>' : '';
+                  let badge = '';
+                  if (e.estado === 'confirmado') badge = ' <span class="badge-pasa">✓ PASA</span>';
+                  else if (cls === 'tercero') badge = ' <span class="badge-tercero">POSIBLE 3°</span>';
                   return `
                     <tr class="${cls}">
                       <td style="text-align:center">${i+1}</td>
@@ -878,9 +880,9 @@ function renderMundialGrupos() {
       }).join('')}
     </div>
     <div class="grupos-leyenda">
-      <span><i style="background:#D4EDDA"></i>Clasifican directo (1° y 2°)</span>
-      <span><i style="background:#FFF6D9"></i>3° puede clasificar como mejor tercero</span>
-      <span><i style="background:#E5E7EB"></i>Eliminado</span>
+      <span><i style="background:#3FA66A"></i>Clasifican directo (1° y 2°)</span>
+      <span><i style="background:#D4A53C"></i>3° puede clasificar como mejor tercero</span>
+      <span><i style="background:#5C7268"></i>Eliminado</span>
     </div>
   `;
 }

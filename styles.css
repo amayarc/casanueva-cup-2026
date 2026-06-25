@@ -1302,50 +1302,117 @@ footer {
 }
 
 /* ========= Casanueva Cup theme · overrides para dark mode verde ========= */
-/* Forzamos tonos verdes/dorados sobre la base diseñada para light mode */
+/* Fuerza tonos verdes/dorados sobre la base diseñada para light mode */
 
-/* Fondos crema/claros → tonos verdes oscuros o transparentes */
-.tab:hover, .tab.active { background: rgba(212,165,60,0.12); }
-.rank-table tr:hover { background: rgba(212,165,60,0.08); }
-.rank-table .pos-1 { background: linear-gradient(90deg, rgba(212,165,60,0.18) 0%, transparent 100%); }
-.rank-table .pos-2 { background: linear-gradient(90deg, rgba(207,224,214,0.12) 0%, transparent 100%); }
-.rank-table .pos-3 { background: linear-gradient(90deg, rgba(199,81,72,0.12) 0%, transparent 100%); }
-.podium-card.gold   { background: linear-gradient(180deg, rgba(212,165,60,0.22) 0%, var(--card) 60%); }
-.podium-card.silver { background: linear-gradient(180deg, rgba(207,224,214,0.15) 0%, var(--card) 60%); }
-.podium-card.bronze { background: linear-gradient(180deg, rgba(199,81,72,0.18) 0%, var(--card) 60%); }
-.persona-header { background: linear-gradient(135deg, rgba(212,165,60,0.10) 0%, var(--card) 100%); }
-.persona-bonus  { background: linear-gradient(180deg, rgba(212,165,60,0.10) 0%, var(--card) 70%); }
-.pred-item.exact   { background: rgba(63,166,106,0.22); }
-.pred-item.partial { background: rgba(212,165,60,0.22); }
-.regla-card.highlight { background: linear-gradient(180deg, rgba(212,165,60,0.12) 0%, var(--card) 50%); }
+/* Header en gradiente verde + filo dorado */
+header { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border-bottom: 3px solid var(--gold); color: var(--text); }
+header h1, header .subtitle, header .ball { color: var(--text); }
+.pill { background: rgba(212,165,60,0.22); color: var(--gold); border: 1px solid rgba(212,165,60,0.5); }
 
-/* Cards y fondos: que respeten el dark mode */
+/* Tabs */
+.tabs { background: var(--card); border-bottom: 1px solid var(--border); }
+.tab { color: var(--muted); }
+.tab:hover { background: rgba(212,165,60,0.15); color: var(--gold); }
+.tab.active { color: var(--gold); border-bottom-color: var(--gold); background: rgba(212,165,60,0.10); }
+
+/* Cards y fondos en dark mode */
 .persona-detalle, .partido-card, .grupo-card, .bracket-match, .regla-card,
-.capt-section, .capt-instructions, .login-card { background: var(--card); }
-.partido-score.pending { background: rgba(247,245,239,.06); color: var(--muted); }
-.capt-partido.has-result { background: rgba(63,166,106,0.15); }
-.duelo-side.winner { background: rgba(63,166,106,0.18); }
+.capt-section, .capt-instructions, .login-card { background: var(--card); color: var(--text); }
+.partido-score.pending { background: rgba(247,245,239,.08); color: var(--muted); }
+.capt-partido.has-result { background: rgba(63,166,106,0.18); }
+.duelo-side.winner { background: rgba(63,166,106,0.20); }
 
-/* Inputs y textareas: fondo verde tarjeta, texto claro */
+/* Inputs y textareas */
 input[type="text"], input[type="number"], input[type="date"], input[type="password"], textarea, select {
-  background: var(--bg);
-  color: var(--text);
-  border: 2px solid var(--border);
+  background: var(--bg); color: var(--text); border: 2px solid var(--border);
 }
 input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.7; }
 
-/* Textos antes en azul DES → ahora claros o dorados */
+/* Clasificación general (tabla principal) */
+.rank-table th { color: var(--gold); border-bottom: 2px solid var(--gold); }
+.rank-table td { color: var(--text); border-bottom: 1px solid var(--border); }
+.rank-table tr:hover { background: rgba(212,165,60,0.10); }
+.rank-table .pos-1 { background: linear-gradient(90deg, rgba(212,165,60,0.22) 0%, transparent 100%); }
+.rank-table .pos-2 { background: linear-gradient(90deg, rgba(207,224,214,0.14) 0%, transparent 100%); }
+.rank-table .pos-3 { background: linear-gradient(90deg, rgba(199,81,72,0.16) 0%, transparent 100%); }
+
+/* Podio */
+.podium-card.gold   { background: linear-gradient(180deg, rgba(212,165,60,0.30) 0%, var(--card) 60%); }
+.podium-card.silver { background: linear-gradient(180deg, rgba(207,224,214,0.18) 0%, var(--card) 60%); }
+.podium-card.bronze { background: linear-gradient(180deg, rgba(199,81,72,0.22) 0%, var(--card) 60%); }
+.podium-name, .podium-pts { color: var(--text); }
+
+/* Persona detalle */
+.persona-header { background: linear-gradient(135deg, rgba(212,165,60,0.14) 0%, var(--card) 100%); color: var(--text); }
+.persona-bonus  { background: linear-gradient(180deg, rgba(212,165,60,0.14) 0%, var(--card) 70%); color: var(--text); }
+.pred-item.exact   { background: rgba(63,166,106,0.28); color: var(--text); }
+.pred-item.partial { background: rgba(212,165,60,0.28); color: var(--text); }
+
+/* Reglas */
+.regla-card.highlight { background: linear-gradient(180deg, rgba(212,165,60,0.18) 0%, var(--card) 50%); }
+.regla-card .big { color: var(--gold); }
+
+/* ============= Mundial · Tabla de grupos ============= */
+.grupo-card h3 { color: var(--gold); }
+.grupo-table th { color: var(--gold); border-bottom: 2px solid var(--gold); background: transparent; }
+.grupo-table td { color: var(--text); border-bottom: 1px solid var(--border); }
+
+/* Top 2 (en curso, no garantizados) */
+.grupo-table tr.clasif       { background: linear-gradient(90deg, rgba(63,166,106,0.22) 0%, transparent 100%); }
+.grupo-table tr.clasif td    { color: var(--text); font-weight: 600; }
+
+/* Confirmado (PASA garantizado) */
+.grupo-table tr.confirmado   { background: linear-gradient(90deg, rgba(63,166,106,0.45) 0%, rgba(63,166,106,0.12) 100%); }
+.grupo-table tr.confirmado td { color: #FFFFFF; font-weight: 700; }
+
+/* Posible 3° (puede clasificar como mejor tercero) */
+.grupo-table tr.tercero      { background: linear-gradient(90deg, rgba(212,165,60,0.32) 0%, rgba(212,165,60,0.05) 100%); }
+.grupo-table tr.tercero td   { color: #FFFFFF; font-weight: 600; }
+
+/* Eliminado: atenuado pero legible */
+.grupo-table tr.eliminado    { opacity: 1; background: rgba(247,245,239,0.04); }
+.grupo-table tr.eliminado td { color: rgba(247,245,239,0.55); font-weight: 500; }
+.grupo-table tr.eliminado td:nth-child(2) { text-decoration: line-through; }
+.grupo-table tr.eliminado .col-flag { color: rgba(212,165,60,0.65); }
+
+/* Códigos FIFA en dorado */
+.grupo-table .col-flag { color: var(--gold); font-weight: 800; }
+.grupo-table .dg-plus  { color: #7BD9A2; font-weight: 700; }
+.grupo-table .dg-minus { color: #E2978F; font-weight: 700; }
+
+/* Badges */
+.badge-pasa    { background: var(--green); color: #FFFFFF; font-weight: 800; padding: 3px 9px; border-radius: 11px; font-size: 0.70rem; margin-left: 6px; letter-spacing: 0.3px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+.badge-tercero { background: var(--gold);  color: #122019; font-weight: 800; padding: 3px 9px; border-radius: 11px; font-size: 0.70rem; margin-left: 6px; letter-spacing: 0.3px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+
+/* Leyenda de grupos: cuadritos sólidos para verse en dark mode */
+.grupos-leyenda { background: var(--card); color: var(--text); padding: 14px 16px; border-radius: 10px; margin-top: 16px; display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.85rem; border: 1px solid var(--border); }
+.grupos-leyenda span { display: inline-flex; align-items: center; gap: 6px; color: var(--text); }
+.grupos-leyenda i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: middle; border: 1px solid rgba(0,0,0,0.3); }
+
+/* ============= Bracket ============= */
 .bracket-name.provisional { color: var(--silver); }
-.bracket-name.confirmed   { color: var(--green); font-weight: 800; }
+.bracket-name.confirmed   { color: #7BD9A2; font-weight: 800; }
 .bracket-score { color: var(--gold); }
 .bracket-flag  { color: var(--gold); }
-.bracket-match.played { border-color: var(--green); background: rgba(63,166,106,0.12); }
-.bracket-match.next   { border-color: var(--gold);  background: rgba(212,165,60,0.10); }
-.grupo-table tr.clasificado { background: linear-gradient(90deg, rgba(63,166,106,0.20) 0%, transparent 100%); }
-.grupo-table tr.tercero     { background: linear-gradient(90deg, rgba(212,165,60,0.20) 0%, transparent 100%); }
-.grupo-table tr.confirmado  { background: linear-gradient(90deg, rgba(63,166,106,0.30) 0%, rgba(63,166,106,0.10) 100%); }
-.grupo-table .dg-plus  { color: var(--green); }
-.grupo-table .dg-minus { color: var(--bronze); }
+.bracket-match.played { border-color: var(--green); background: rgba(63,166,106,0.15); }
+.bracket-match.next   { border-color: var(--gold);  background: rgba(212,165,60,0.12); }
+.bracket-pending-team { color: var(--muted); }
+.bracket-col-title { color: var(--gold); }
+.bracket-stage-info { color: var(--muted); }
+.bracket-meta { color: var(--muted); }
+.bracket-leyenda { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+.bracket-leyenda i { border: 1px solid rgba(0,0,0,0.3); }
+.bracket-conf { background: var(--green); color: #FFFFFF; }
+
+/* Sub-tabs (Grupos / Bracket / Bota) */
+.sub-tab { color: var(--muted); }
+.sub-tab.active { color: var(--gold); border-bottom-color: var(--gold); background: rgba(212,165,60,0.10); }
+
+/* Hero blocks */
+.hero-bonus.hero-blue   { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border: 2px solid var(--gold); color: var(--text); }
+.hero-bonus.hero-orange { background: linear-gradient(135deg, var(--gold) 0%, var(--orange-dark) 100%); color: #122019; border: 2px solid var(--blue); }
+.hero-bonus .hero-title, .hero-bonus .hero-h2, .hero-bonus .hero-h2-sub, .hero-bonus .hero-sub { color: inherit; }
+.hero-orange .hero-title, .hero-orange .hero-h2, .hero-orange .hero-sub { color: #122019; }
 
 /* Botones */
 .btn-primary { background: var(--gold); color: #122019; }
@@ -1357,22 +1424,18 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.7; }
 .save-msg.ok  { color: var(--green); }
 .save-msg.err { color: var(--bronze); }
 
-/* Header: gradiente verde-oscuro a verde-medio */
-header { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border-bottom: 3px solid var(--gold); }
-header h1, header .subtitle, header .ball { color: var(--text); }
+/* Bota de Oro */
+.bota-actual-head { color: var(--gold); }
+.bota-table th { color: var(--gold); border-bottom: 2px solid var(--gold); }
+.bota-table td { color: var(--text); border-bottom: 1px solid var(--border); }
+.bota-table .col-pais { color: var(--gold); font-weight: 800; }
+.bota-actual-footer { color: var(--muted); }
 
-/* Tabs y pills */
-.pill { background: rgba(212,165,60,0.18); color: var(--gold); border: 1px solid rgba(212,165,60,0.4); }
-.tabs { background: var(--card); border-bottom: 1px solid var(--border); }
-.tab { color: var(--muted); }
-.tab.active { color: var(--gold); border-bottom-color: var(--gold); }
-
-/* Hero blocks (Campeón / Mundial) en tonos verde + dorado */
-.hero-bonus.hero-blue   { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border: 2px solid var(--gold); }
-.hero-bonus.hero-orange { background: linear-gradient(135deg, var(--gold) 0%, var(--orange-dark) 100%); color: #122019; border: 2px solid var(--blue); }
-.hero-bonus .hero-title, .hero-bonus .hero-h2, .hero-bonus .hero-h2-sub, .hero-bonus .hero-sub { color: inherit; }
-.hero-orange .hero-title, .hero-orange .hero-h2, .hero-orange .hero-sub { color: #122019; }
-
-/* Pie chart legend */
+/* Pie chart y otros textos */
 .pie-legend-item { color: var(--text); }
-.podium-name, .podium-pts, .rank-table td { color: var(--text); }
+.partido-teams, .partido-team { color: var(--text); }
+.partido-info { color: var(--muted); }
+.info, .updated { color: var(--muted); }
+.filter-row label { color: var(--text); }
+h2, h3 { color: var(--gold); }
+footer { color: var(--muted); }
