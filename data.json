@@ -15518,8 +15518,8 @@
         {
           "slot": 14,
           "nombre": "Ema",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
