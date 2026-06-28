@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initSubTabs();
     renderHeaderPills();
     renderClasificacion();
+    initFaseTabs();
     renderPartidos();
     renderPorPersona();
     renderCampeon();
@@ -73,7 +74,7 @@ function recalcularTodo(data) {
     grupo.predicciones.forEach(pr => {
       const pts = calcPtsPartido(pr.local, pr.visitante, partido.gol_local, partido.gol_visit);
       pr.pts = pts;
-      if (pts === 3) { stats[pr.slot].marcadores_exactos++; stats[pr.slot].pts_partidos += 3; }
+      if (pts === 4) { stats[pr.slot].marcadores_exactos++; stats[pr.slot].pts_partidos += 4; }
       else if (pts === 1) { stats[pr.slot].ganadores_correctos++; stats[pr.slot].pts_partidos += 1; }
       else if (pts === 0) { stats[pr.slot].fallos++; }
     });
@@ -261,6 +262,11 @@ function renderHeaderPills() {
     `${DATA.meta.partidos_jugados}/${DATA.meta.total_partidos} jugados`;
   document.getElementById('pill-participantes').textContent =
     `${DATA.meta.total_participantes} quinielas`;
+  const sub = document.querySelector('.subtitle');
+  if (sub && DATA.meta.fase) {
+    const pref = (sub.textContent.split('·')[0] || '').trim();
+    sub.textContent = (pref ? pref + ' · ' : '') + DATA.meta.fase;
+  }
 }
 
 // ========= Clasificación =========
@@ -301,30 +307,62 @@ function renderClasificacion() {
   }).join('');
 }
 
-// ========= Partidos =========
+// ========= Partidos (con pestañas por fase) =========
+let CURRENT_FASE = null;
+
+function faseDefault() {
+  const hoy = getHoyIso();
+  const fasesHoy = DATA.partidos.filter(p => p.fecha_iso === hoy).map(p => p.fase);
+  if (fasesHoy.length) return fasesHoy[fasesHoy.length - 1];
+  const fases = DATA.meta.fases || [];
+  for (let i = fases.length - 1; i >= 0; i--) {
+    if (DATA.partidos.some(p => p.fase === fases[i].key)) return fases[i].key;
+  }
+  return fases[0]?.key || null;
+}
+
+function initFaseTabs() {
+  const cont = document.getElementById('fase-tabs');
+  const fases = DATA.meta.fases || [];
+  if (!cont) return;
+  if (fases.length <= 1) { cont.style.display = 'none'; CURRENT_FASE = fases[0]?.key || null; return; }
+  CURRENT_FASE = faseDefault();
+  cont.innerHTML = fases.map(f =>
+    `<button class="sub-tab fase-tab${f.key === CURRENT_FASE ? ' active' : ''}" data-fase="${f.key}">${escapeHtml(f.label)}</button>`
+  ).join('');
+  cont.querySelectorAll('.fase-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      cont.querySelectorAll('.fase-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      CURRENT_FASE = btn.dataset.fase;
+      const fe = document.getElementById('filtro-dia'); if (fe) fe.value = '';
+      renderPartidos('');
+    });
+  });
+}
+
 function renderPartidos(filtroDia = '') {
   const cont = document.getElementById('partidos-list');
   const filtroEl = document.getElementById('filtro-dia');
+  const fase = CURRENT_FASE;
 
-  // Llenar el filtro de día solo la primera vez
-  if (filtroEl.options.length <= 1) {
-    const dias = [...new Set(DATA.partidos.map(p => p.fecha))];
-    dias.forEach(d => {
-      const opt = document.createElement('option');
-      opt.value = d; opt.textContent = d;
-      filtroEl.appendChild(opt);
-    });
-    filtroEl.addEventListener('change', e => renderPartidos(e.target.value));
+  const partidosFase = DATA.partidos.filter(p => !fase || p.fase === fase);
+
+  if (filtroEl) {
+    const dias = [...new Set(partidosFase.map(p => p.fecha))];
+    const actuales = Array.from(filtroEl.options).slice(1).map(o => o.value);
+    if (actuales.join('|') !== dias.join('|')) {
+      filtroEl.innerHTML = '<option value="">Todos</option>' +
+        dias.map(d => `<option value="${escapeHtml(d)}">${escapeHtml(d)}</option>`).join('');
+      filtroEl.onchange = e => renderPartidos(e.target.value);
+    }
   }
 
   const hoy = getHoyIso();
-  const partidos = DATA.partidos.filter(p => !filtroDia || p.fecha === filtroDia);
-
-  // Si hay filtro de día, no priorizamos HOY
+  const partidos = partidosFase.filter(p => !filtroDia || p.fecha === filtroDia);
   const partidosHoy = filtroDia ? [] : partidos.filter(p => p.fecha_iso === hoy);
   const partidosResto = filtroDia ? partidos : partidos.filter(p => p.fecha_iso !== hoy);
 
-  // Agrupar el resto por día y ordenar cronológicamente
   const byDay = {};
   partidosResto.forEach(p => {
     const k = p.fecha || 'Sin fecha';
@@ -338,19 +376,19 @@ function renderPartidos(filtroDia = '') {
     html += `
       <div class="partidos-day day-today">
         <h3>📍 HOY · ${partidosHoy[0].fecha}</h3>
-        ${partidosHoy.map(p => renderPartidoCard(p, true)).join('')}
+        ${partidosHoy.map(p => renderPartidoCard(p)).join('')}
       </div>
     `;
   }
   html += grupos.map(g => `
     <div class="partidos-day">
       <h3>${g.label}</h3>
-      ${g.list.map(p => renderPartidoCard(p, false)).join('')}
+      ${g.list.map(p => renderPartidoCard(p)).join('')}
     </div>
   `).join('');
+  if (!html) html = '<p style="text-align:center;color:var(--muted);padding:24px;">No hay partidos en esta fase.</p>';
   cont.innerHTML = html;
 
-  // Click handlers para expandir
   cont.querySelectorAll('.partido-card').forEach(card => {
     card.addEventListener('click', () => card.classList.toggle('open'));
   });
@@ -385,7 +423,7 @@ function renderPartidoCard(p) {
 function renderPredItem(pr, jugado) {
   let cls = '';
   if (jugado) {
-    if (pr.pts === 3) cls = 'exact';
+    if (pr.pts === 4) cls = 'exact';
     else if (pr.pts === 1) cls = 'partial';
     else cls = 'fail';
   }
@@ -444,12 +482,20 @@ function renderPersonaDetalle(slot) {
     byDay[partido.fecha].push({partido, pred});
   });
 
-  const daysHtml = Object.entries(byDay).map(([dia, list]) => `
+  let lastFaseP = null;
+  const daysHtml = Object.entries(byDay).map(([dia, list]) => {
+    const faseLbl = list[0]?.partido?.fase_label || '';
+    let banner = '';
+    if (faseLbl && faseLbl !== lastFaseP) {
+      banner = `<h2 class="fase-banner">${escapeHtml(faseLbl)}</h2>`;
+      lastFaseP = faseLbl;
+    }
+    return banner + `
     <div class="partidos-day">
       <h3>${dia}</h3>
       ${list.map(({partido, pred}) => renderPersonaPartido(partido, pred)).join('')}
-    </div>
-  `).join('');
+    </div>`;
+  }).join('');
 
   cont.innerHTML = headerHtml + daysHtml;
 }
@@ -459,7 +505,7 @@ function renderPersonaPartido(partido, pred) {
   const tu = (pred && pred.local !== null) ? `${pred.local}-${pred.visitante}` : '—';
   let cls = '', ptsBadge = '';
   if (partido.jugado && pred) {
-    if (pred.pts === 3) { cls = 'exact'; ptsBadge = '<span class="pred-pts">3</span>'; }
+    if (pred.pts === 4) { cls = 'exact'; ptsBadge = '<span class="pred-pts">4</span>'; }
     else if (pred.pts === 1) { cls = 'partial'; ptsBadge = '<span class="pred-pts">1</span>'; }
     else { cls = 'fail'; ptsBadge = '<span class="pred-pts">0</span>'; }
   }
@@ -1252,7 +1298,7 @@ function descargarJSON() {
 
 function calcPtsPartido(pl, pv, rl, rv) {
   if (pl == null || pv == null || rl == null || rv == null) return null;
-  if (pl === rl && pv === rv) return 3;
+  if (pl === rl && pv === rv) return 4;
   const sp = Math.sign(pl - pv), sr = Math.sign(rl - rv);
   return sp === sr ? 1 : 0;
 }

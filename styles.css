@@ -1619,3 +1619,16 @@ h2, h3 { color: var(--gold) !important; }
 
 /* Updated text */
 .updated-text, p.updated { color: var(--muted) !important; }
+
+/* Banner separador de fase (Grupos / R32) en vista por persona */
+.fase-banner {
+  margin: 26px 0 10px;
+  padding: 8px 14px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: .3px;
+  color: #fff;
+  background: linear-gradient(90deg, #1B5E20, #C9A227);
+  border-radius: 8px;
+  text-transform: uppercase;
+}
