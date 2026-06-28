@@ -72,10 +72,11 @@ function recalcularTodo(data) {
     const partido = data.partidos.find(x => x.num === grupo.partido_num);
     if (!partido) return;
     grupo.predicciones.forEach(pr => {
-      const pts = calcPtsPartido(pr.local, pr.visitante, partido.gol_local, partido.gol_visit);
+      const exact = (partido.fase && partido.fase !== 'grupos') ? 4 : 3;
+      const pts = calcPtsPartido(pr.local, pr.visitante, partido.gol_local, partido.gol_visit, exact);
       pr.pts = pts;
-      if (pts === 4) { stats[pr.slot].marcadores_exactos++; stats[pr.slot].pts_partidos += 4; }
-      else if (pts === 1) { stats[pr.slot].ganadores_correctos++; stats[pr.slot].pts_partidos += 1; }
+      if (pts === 1) { stats[pr.slot].ganadores_correctos++; stats[pr.slot].pts_partidos += 1; }
+      else if (pts === 3 || pts === 4) { stats[pr.slot].marcadores_exactos++; stats[pr.slot].pts_partidos += pts; }
       else if (pts === 0) { stats[pr.slot].fallos++; }
     });
   });
@@ -423,7 +424,7 @@ function renderPartidoCard(p) {
 function renderPredItem(pr, jugado) {
   let cls = '';
   if (jugado) {
-    if (pr.pts === 4) cls = 'exact';
+    if (pr.pts >= 3) cls = 'exact';
     else if (pr.pts === 1) cls = 'partial';
     else cls = 'fail';
   }
@@ -505,7 +506,7 @@ function renderPersonaPartido(partido, pred) {
   const tu = (pred && pred.local !== null) ? `${pred.local}-${pred.visitante}` : '—';
   let cls = '', ptsBadge = '';
   if (partido.jugado && pred) {
-    if (pred.pts === 4) { cls = 'exact'; ptsBadge = '<span class="pred-pts">4</span>'; }
+    if (pred.pts >= 3) { cls = 'exact'; ptsBadge = '<span class="pred-pts">' + pred.pts + '</span>'; }
     else if (pred.pts === 1) { cls = 'partial'; ptsBadge = '<span class="pred-pts">1</span>'; }
     else { cls = 'fail'; ptsBadge = '<span class="pred-pts">0</span>'; }
   }
@@ -1296,9 +1297,9 @@ function descargarJSON() {
   URL.revokeObjectURL(url);
 }
 
-function calcPtsPartido(pl, pv, rl, rv) {
+function calcPtsPartido(pl, pv, rl, rv, exact = 3) {
   if (pl == null || pv == null || rl == null || rv == null) return null;
-  if (pl === rl && pv === rv) return 4;
+  if (pl === rl && pv === rv) return exact;
   const sp = Math.sign(pl - pv), sr = Math.sign(rl - rv);
   return sp === sr ? 1 : 0;
 }

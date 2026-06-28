@@ -1460,7 +1460,7 @@
           "nombre": "Pepin",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 2,
@@ -1474,28 +1474,28 @@
           "nombre": "Pepe",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 4,
           "nombre": "Clau",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 5,
           "nombre": "Pau",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 6,
           "nombre": "Alvaro DTA",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
@@ -1516,7 +1516,7 @@
           "nombre": "Anto",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 10,
@@ -1537,7 +1537,7 @@
           "nombre": "Cava",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 13,
@@ -1551,7 +1551,7 @@
           "nombre": "Ema",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 15,
@@ -1572,28 +1572,28 @@
           "nombre": "Pablo",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 18,
           "nombre": "Iker",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 19,
           "nombre": "Mica",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 20,
           "nombre": "Kiko",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 21,
@@ -1621,7 +1621,7 @@
           "nombre": "Charger Diabólico + Diego",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 25,
@@ -1752,7 +1752,7 @@
           "nombre": "Alvaro RC",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 16,
@@ -1766,7 +1766,7 @@
           "nombre": "Pablo",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 18,
@@ -1780,7 +1780,7 @@
           "nombre": "Mica",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 20,
@@ -1967,7 +1967,7 @@
           "nombre": "Iker",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 19,
@@ -2147,7 +2147,7 @@
           "nombre": "Andrea R",
           "local": 4,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 17,
@@ -2605,7 +2605,7 @@
           "nombre": "Ángel CC",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 27,
@@ -2722,7 +2722,7 @@
           "nombre": "Alvaro RC",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 16,
@@ -2771,7 +2771,7 @@
           "nombre": "Almu",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 23,
@@ -2853,7 +2853,7 @@
           "nombre": "Alvaro DTA",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
@@ -2874,7 +2874,7 @@
           "nombre": "Anto",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 10,
@@ -2902,7 +2902,7 @@
           "nombre": "Amaya",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
@@ -2958,14 +2958,14 @@
           "nombre": "Peyotinho",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 22,
           "nombre": "Almu",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 23,
@@ -3290,7 +3290,7 @@
           "nombre": "Amaya",
           "local": 2,
           "visitante": 2,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
@@ -3982,7 +3982,7 @@
           "nombre": "Pepin",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 2,
@@ -4115,7 +4115,7 @@
           "nombre": "Kiko",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 21,
@@ -4370,7 +4370,7 @@
           "nombre": "Pepin",
           "local": 2,
           "visitante": 2,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 2,
@@ -4482,7 +4482,7 @@
           "nombre": "Pablo",
           "local": 2,
           "visitante": 2,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 18,
@@ -4524,7 +4524,7 @@
           "nombre": "Ana CP",
           "local": 2,
           "visitante": 2,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 24,
@@ -4571,7 +4571,7 @@
           "nombre": "Abui",
           "local": 3,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 3,
@@ -4758,7 +4758,7 @@
           "nombre": "Pepin",
           "local": 3,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 2,
@@ -4807,7 +4807,7 @@
           "nombre": "Rodrigo Casanueva Andrade primero de su nombre",
           "local": 3,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 9,
@@ -4849,7 +4849,7 @@
           "nombre": "Ema",
           "local": 3,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 15,
@@ -4863,7 +4863,7 @@
           "nombre": "Andrea R",
           "local": 3,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 17,
@@ -4898,7 +4898,7 @@
           "nombre": "Peyotinho",
           "local": 3,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 22,
@@ -4912,7 +4912,7 @@
           "nombre": "Ana CP",
           "local": 3,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 24,
@@ -4940,7 +4940,7 @@
           "nombre": "Daniela",
           "local": 3,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         }
       ]
     },
@@ -5146,7 +5146,7 @@
           "nombre": "Pepin",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 2,
@@ -5160,35 +5160,35 @@
           "nombre": "Pepe",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 4,
           "nombre": "Clau",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 5,
           "nombre": "Pau",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 6,
           "nombre": "Alvaro DTA",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
           "nombre": "Diego",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 8,
@@ -5251,7 +5251,7 @@
           "nombre": "Andrea R",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 17,
@@ -5272,7 +5272,7 @@
           "nombre": "Mica",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 20,
@@ -5314,7 +5314,7 @@
           "nombre": "Maite C",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 26,
@@ -5770,7 +5770,7 @@
           "nombre": "Diego",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 8,
@@ -5798,7 +5798,7 @@
           "nombre": "María",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 12,
@@ -5847,7 +5847,7 @@
           "nombre": "Iker",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 19,
@@ -5861,14 +5861,14 @@
           "nombre": "Kiko",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 21,
           "nombre": "Peyotinho",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 22,
@@ -6083,7 +6083,7 @@
           "nombre": "Charger Diabólico + Diego",
           "local": 1,
           "visitante": 3,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 25,
@@ -6130,14 +6130,14 @@
           "nombre": "Pepe",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 4,
           "nombre": "Clau",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 5,
@@ -6221,7 +6221,7 @@
           "nombre": "Andrea R",
           "local": 1,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 17,
@@ -6824,14 +6824,14 @@
           "nombre": "Mica",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 20,
           "nombre": "Kiko",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 21,
@@ -6913,7 +6913,7 @@
           "nombre": "Clau",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 5,
@@ -6927,7 +6927,7 @@
           "nombre": "Alvaro DTA",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
@@ -6948,7 +6948,7 @@
           "nombre": "Anto",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 10,
@@ -6997,7 +6997,7 @@
           "nombre": "Andrea R",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 17,
@@ -7011,7 +7011,7 @@
           "nombre": "Iker",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 19,
@@ -7025,7 +7025,7 @@
           "nombre": "Kiko",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 21,
@@ -7121,7 +7121,7 @@
           "nombre": "Alvaro DTA",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
@@ -7184,7 +7184,7 @@
           "nombre": "Alvaro RC",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 16,
@@ -7205,7 +7205,7 @@
           "nombre": "Iker",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 19,
@@ -7219,7 +7219,7 @@
           "nombre": "Kiko",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 21,
@@ -7280,7 +7280,7 @@
           "nombre": "Pepin",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 2,
@@ -7294,14 +7294,14 @@
           "nombre": "Pepe",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 4,
           "nombre": "Clau",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 5,
@@ -7315,7 +7315,7 @@
           "nombre": "Alvaro DTA",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
@@ -7336,14 +7336,14 @@
           "nombre": "Anto",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 10,
           "nombre": "Raul",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 11,
@@ -7364,7 +7364,7 @@
           "nombre": "Amaya",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
@@ -7385,7 +7385,7 @@
           "nombre": "Andrea R",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 17,
@@ -7420,14 +7420,14 @@
           "nombre": "Peyotinho",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 22,
           "nombre": "Almu",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 23,
@@ -7448,7 +7448,7 @@
           "nombre": "Maite C",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 26,
@@ -7462,7 +7462,7 @@
           "nombre": "Daniela",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         }
       ]
     },
@@ -7537,7 +7537,7 @@
           "nombre": "Raul",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 11,
@@ -7551,14 +7551,14 @@
           "nombre": "Cava",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 13,
           "nombre": "Amaya",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
@@ -7600,7 +7600,7 @@
           "nombre": "Mica",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 20,
@@ -7621,7 +7621,7 @@
           "nombre": "Almu",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 23,
@@ -8077,7 +8077,7 @@
           "nombre": "Clau",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 5,
@@ -8091,7 +8091,7 @@
           "nombre": "Alvaro DTA",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
@@ -8133,14 +8133,14 @@
           "nombre": "Cava",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 13,
           "nombre": "Amaya",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
@@ -8154,7 +8154,7 @@
           "nombre": "Alvaro RC",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 16,
@@ -8217,7 +8217,7 @@
           "nombre": "Charger Diabólico + Diego",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 25,
@@ -9241,7 +9241,7 @@
           "nombre": "Clau",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 5,
@@ -9262,7 +9262,7 @@
           "nombre": "Diego",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 8,
@@ -9283,7 +9283,7 @@
           "nombre": "Raul",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 11,
@@ -9304,7 +9304,7 @@
           "nombre": "Amaya",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
@@ -9318,7 +9318,7 @@
           "nombre": "Alvaro RC",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 16,
@@ -9332,7 +9332,7 @@
           "nombre": "Pablo",
           "local": 2,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 18,
@@ -9428,7 +9428,7 @@
           "nombre": "Pepe",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 4,
@@ -9442,14 +9442,14 @@
           "nombre": "Pau",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 6,
           "nombre": "Alvaro DTA",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
@@ -9463,7 +9463,7 @@
           "nombre": "Rodrigo Casanueva Andrade primero de su nombre",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 9,
@@ -9498,28 +9498,28 @@
           "nombre": "Amaya",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
           "nombre": "Ema",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 15,
           "nombre": "Alvaro RC",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 16,
           "nombre": "Andrea R",
           "local": 3,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 17,
@@ -9837,7 +9837,7 @@
           "nombre": "Alvaro DTA",
           "local": 1,
           "visitante": 2,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 7,
@@ -9914,14 +9914,14 @@
           "nombre": "Pablo",
           "local": 1,
           "visitante": 2,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 18,
           "nombre": "Iker",
           "local": 1,
           "visitante": 2,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 19,
@@ -10461,14 +10461,14 @@
           "nombre": "Cava",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 13,
           "nombre": "Amaya",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
@@ -10503,7 +10503,7 @@
           "nombre": "Iker",
           "local": 0,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 19,
@@ -10697,7 +10697,7 @@
           "nombre": "Iker",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 19,
@@ -10760,7 +10760,7 @@
           "nombre": "Daniela",
           "local": 1,
           "visitante": 0,
-          "pts": 4
+          "pts": 3
         }
       ]
     },
@@ -10856,7 +10856,7 @@
           "nombre": "Amaya",
           "local": 2,
           "visitante": 1,
-          "pts": 4
+          "pts": 3
         },
         {
           "slot": 14,
@@ -18764,11 +18764,11 @@
     {
       "slot": 6,
       "nombre": "Alvaro DTA",
-      "pts_total": 58,
-      "pts_partidos": 58,
+      "pts_total": 49,
+      "pts_partidos": 49,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 58,
+      "pts_grupos": 49,
       "pts_r32": 0,
       "marcadores_exactos": 9,
       "ganadores_correctos": 22,
@@ -18778,11 +18778,11 @@
     {
       "slot": 16,
       "nombre": "Andrea R",
-      "pts_total": 54,
-      "pts_partidos": 54,
+      "pts_total": 47,
+      "pts_partidos": 47,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 54,
+      "pts_grupos": 47,
       "pts_r32": 0,
       "marcadores_exactos": 7,
       "ganadores_correctos": 26,
@@ -18790,83 +18790,83 @@
       "pos": 2
     },
     {
-      "slot": 13,
-      "nombre": "Amaya",
-      "pts_total": 52,
-      "pts_partidos": 52,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "pts_grupos": 52,
-      "pts_r32": 0,
-      "marcadores_exactos": 9,
-      "ganadores_correctos": 16,
-      "fallos": 25,
-      "pos": 3
-    },
-    {
-      "slot": 18,
-      "nombre": "Iker",
-      "pts_total": 51,
-      "pts_partidos": 51,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "pts_grupos": 51,
-      "pts_r32": 0,
-      "marcadores_exactos": 8,
-      "ganadores_correctos": 19,
-      "fallos": 23,
-      "pos": 4
-    },
-    {
       "slot": 15,
       "nombre": "Alvaro RC",
-      "pts_total": 51,
-      "pts_partidos": 51,
+      "pts_total": 45,
+      "pts_partidos": 45,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 51,
+      "pts_grupos": 45,
       "pts_r32": 0,
       "marcadores_exactos": 6,
       "ganadores_correctos": 27,
       "fallos": 17,
-      "pos": 5
+      "pos": 3
     },
     {
-      "slot": 4,
-      "nombre": "Clau",
-      "pts_total": 48,
-      "pts_partidos": 48,
+      "slot": 13,
+      "nombre": "Amaya",
+      "pts_total": 43,
+      "pts_partidos": 43,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 48,
+      "pts_grupos": 43,
       "pts_r32": 0,
-      "marcadores_exactos": 7,
-      "ganadores_correctos": 20,
+      "marcadores_exactos": 9,
+      "ganadores_correctos": 16,
+      "fallos": 25,
+      "pos": 4
+    },
+    {
+      "slot": 18,
+      "nombre": "Iker",
+      "pts_total": 43,
+      "pts_partidos": 43,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 43,
+      "pts_r32": 0,
+      "marcadores_exactos": 8,
+      "ganadores_correctos": 19,
       "fallos": 23,
-      "pos": 6
+      "pos": 5
     },
     {
       "slot": 20,
       "nombre": "Kiko",
-      "pts_total": 48,
-      "pts_partidos": 48,
+      "pts_total": 42,
+      "pts_partidos": 42,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 48,
+      "pts_grupos": 42,
       "pts_r32": 0,
       "marcadores_exactos": 6,
       "ganadores_correctos": 24,
       "fallos": 20,
+      "pos": 6
+    },
+    {
+      "slot": 4,
+      "nombre": "Clau",
+      "pts_total": 41,
+      "pts_partidos": 41,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 41,
+      "pts_r32": 0,
+      "marcadores_exactos": 7,
+      "ganadores_correctos": 20,
+      "fallos": 23,
       "pos": 7
     },
     {
       "slot": 1,
       "nombre": "Pepin",
-      "pts_total": 47,
-      "pts_partidos": 47,
+      "pts_total": 41,
+      "pts_partidos": 41,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 47,
+      "pts_grupos": 41,
       "pts_r32": 0,
       "marcadores_exactos": 6,
       "ganadores_correctos": 23,
@@ -18876,11 +18876,11 @@
     {
       "slot": 17,
       "nombre": "Pablo",
-      "pts_total": 45,
-      "pts_partidos": 45,
+      "pts_total": 40,
+      "pts_partidos": 40,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 45,
+      "pts_grupos": 40,
       "pts_r32": 0,
       "marcadores_exactos": 5,
       "ganadores_correctos": 25,
@@ -18890,11 +18890,11 @@
     {
       "slot": 19,
       "nombre": "Mica",
-      "pts_total": 43,
-      "pts_partidos": 43,
+      "pts_total": 38,
+      "pts_partidos": 38,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 43,
+      "pts_grupos": 38,
       "pts_r32": 0,
       "marcadores_exactos": 5,
       "ganadores_correctos": 23,
@@ -18904,11 +18904,11 @@
     {
       "slot": 12,
       "nombre": "Cava",
-      "pts_total": 42,
-      "pts_partidos": 42,
+      "pts_total": 38,
+      "pts_partidos": 38,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 42,
+      "pts_grupos": 38,
       "pts_r32": 0,
       "marcadores_exactos": 4,
       "ganadores_correctos": 26,
@@ -18918,11 +18918,11 @@
     {
       "slot": 21,
       "nombre": "Peyotinho",
-      "pts_total": 42,
-      "pts_partidos": 42,
+      "pts_total": 38,
+      "pts_partidos": 38,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 42,
+      "pts_grupos": 38,
       "pts_r32": 0,
       "marcadores_exactos": 4,
       "ganadores_correctos": 26,
@@ -18932,11 +18932,11 @@
     {
       "slot": 3,
       "nombre": "Pepe",
-      "pts_total": 41,
-      "pts_partidos": 41,
+      "pts_total": 36,
+      "pts_partidos": 36,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 41,
+      "pts_grupos": 36,
       "pts_r32": 0,
       "marcadores_exactos": 5,
       "ganadores_correctos": 21,
@@ -18946,11 +18946,11 @@
     {
       "slot": 9,
       "nombre": "Anto",
-      "pts_total": 40,
-      "pts_partidos": 40,
+      "pts_total": 36,
+      "pts_partidos": 36,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 40,
+      "pts_grupos": 36,
       "pts_r32": 0,
       "marcadores_exactos": 4,
       "ganadores_correctos": 24,
@@ -18958,41 +18958,41 @@
       "pos": 14
     },
     {
-      "slot": 22,
-      "nombre": "Almu",
-      "pts_total": 39,
-      "pts_partidos": 39,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "pts_grupos": 39,
-      "pts_r32": 0,
-      "marcadores_exactos": 4,
-      "ganadores_correctos": 23,
-      "fallos": 23,
-      "pos": 15
-    },
-    {
       "slot": 5,
       "nombre": "Pau",
-      "pts_total": 39,
-      "pts_partidos": 39,
+      "pts_total": 36,
+      "pts_partidos": 36,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 39,
+      "pts_grupos": 36,
       "pts_r32": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 27,
       "fallos": 20,
+      "pos": 15
+    },
+    {
+      "slot": 22,
+      "nombre": "Almu",
+      "pts_total": 35,
+      "pts_partidos": 35,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 35,
+      "pts_r32": 0,
+      "marcadores_exactos": 4,
+      "ganadores_correctos": 23,
+      "fallos": 23,
       "pos": 16
     },
     {
       "slot": 14,
       "nombre": "Ema",
-      "pts_total": 38,
-      "pts_partidos": 38,
+      "pts_total": 35,
+      "pts_partidos": 35,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 38,
+      "pts_grupos": 35,
       "pts_r32": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 26,
@@ -19002,11 +19002,11 @@
     {
       "slot": 24,
       "nombre": "Charger Diabólico + Diego",
-      "pts_total": 37,
-      "pts_partidos": 37,
+      "pts_total": 34,
+      "pts_partidos": 34,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 37,
+      "pts_grupos": 34,
       "pts_r32": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 25,
@@ -19016,11 +19016,11 @@
     {
       "slot": 7,
       "nombre": "Diego",
-      "pts_total": 36,
-      "pts_partidos": 36,
+      "pts_total": 33,
+      "pts_partidos": 33,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 36,
+      "pts_grupos": 33,
       "pts_r32": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 24,
@@ -19030,11 +19030,11 @@
     {
       "slot": 10,
       "nombre": "Raul",
-      "pts_total": 36,
-      "pts_partidos": 36,
+      "pts_total": 33,
+      "pts_partidos": 33,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 36,
+      "pts_grupos": 33,
       "pts_r32": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 24,
@@ -19044,11 +19044,11 @@
     {
       "slot": 23,
       "nombre": "Ana CP",
-      "pts_total": 34,
-      "pts_partidos": 34,
+      "pts_total": 32,
+      "pts_partidos": 32,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 34,
+      "pts_grupos": 32,
       "pts_r32": 0,
       "marcadores_exactos": 2,
       "ganadores_correctos": 26,
@@ -19056,41 +19056,41 @@
       "pos": 21
     },
     {
-      "slot": 27,
-      "nombre": "Daniela",
-      "pts_total": 31,
-      "pts_partidos": 31,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "pts_grupos": 31,
-      "pts_r32": 0,
-      "marcadores_exactos": 3,
-      "ganadores_correctos": 19,
-      "fallos": 28,
-      "pos": 22
-    },
-    {
       "slot": 8,
       "nombre": "Rodrigo Casanueva Andrade primero de su nombre",
-      "pts_total": 31,
-      "pts_partidos": 31,
+      "pts_total": 29,
+      "pts_partidos": 29,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 31,
+      "pts_grupos": 29,
       "pts_r32": 0,
       "marcadores_exactos": 2,
       "ganadores_correctos": 23,
       "fallos": 25,
+      "pos": 22
+    },
+    {
+      "slot": 27,
+      "nombre": "Daniela",
+      "pts_total": 28,
+      "pts_partidos": 28,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 28,
+      "pts_r32": 0,
+      "marcadores_exactos": 3,
+      "ganadores_correctos": 19,
+      "fallos": 28,
       "pos": 23
     },
     {
       "slot": 11,
       "nombre": "María",
-      "pts_total": 27,
-      "pts_partidos": 27,
+      "pts_total": 26,
+      "pts_partidos": 26,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 27,
+      "pts_grupos": 26,
       "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 23,
@@ -19100,11 +19100,11 @@
     {
       "slot": 2,
       "nombre": "Abui",
-      "pts_total": 26,
-      "pts_partidos": 26,
+      "pts_total": 25,
+      "pts_partidos": 25,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 26,
+      "pts_grupos": 25,
       "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 22,
@@ -19112,31 +19112,31 @@
       "pos": 25
     },
     {
-      "slot": 25,
-      "nombre": "Maite C",
-      "pts_total": 23,
-      "pts_partidos": 23,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "pts_grupos": 23,
-      "pts_r32": 0,
-      "marcadores_exactos": 2,
-      "ganadores_correctos": 15,
-      "fallos": 33,
-      "pos": 26
-    },
-    {
       "slot": 26,
       "nombre": "Ángel CC",
-      "pts_total": 23,
-      "pts_partidos": 23,
+      "pts_total": 22,
+      "pts_partidos": 22,
       "pts_bonus": 0,
       "pts_duelos": 0,
-      "pts_grupos": 23,
+      "pts_grupos": 22,
       "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 19,
       "fallos": 30,
+      "pos": 26
+    },
+    {
+      "slot": 25,
+      "nombre": "Maite C",
+      "pts_total": 21,
+      "pts_partidos": 21,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 21,
+      "pts_r32": 0,
+      "marcadores_exactos": 2,
+      "ganadores_correctos": 15,
+      "fallos": 33,
       "pos": 27
     }
   ]
