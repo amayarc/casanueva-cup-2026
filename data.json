@@ -18374,7 +18374,7 @@
           "slot": 4,
           "nombre": "Clau",
           "local": 2,
-          "visitante": null,
+          "visitante": 0,
           "pts": null
         },
         {
