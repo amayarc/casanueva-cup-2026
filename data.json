@@ -16423,8 +16423,8 @@
         {
           "slot": 4,
           "nombre": "Clau",
-          "local": 0,
-          "visitante": 3,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
