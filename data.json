@@ -18761,8 +18761,8 @@
         {
           "slot": 22,
           "nombre": "Almu",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
@@ -18956,8 +18956,8 @@
         {
           "slot": 22,
           "nombre": "Almu",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 2,
           "pts": null
         },
         {
@@ -19151,8 +19151,8 @@
         {
           "slot": 22,
           "nombre": "Almu",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
@@ -19346,8 +19346,8 @@
         {
           "slot": 22,
           "nombre": "Almu",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
