@@ -1,9 +1,9 @@
 {
   "meta": {
     "nombre": "Casanueva Cup",
-    "fase": "Grupos + Dieciseisavos + Octavos + Cuartos",
+    "fase": "Grupos + Dieciseisavos + Octavos + Cuartos + Semifinales",
     "total_participantes": 27,
-    "total_partidos": 100,
+    "total_partidos": 102,
     "partidos_jugados": 50,
     "campeon_real": null,
     "goleador_real": null,
@@ -24,6 +24,10 @@
       {
         "key": "cua",
         "label": "Cuartos de Final"
+      },
+      {
+        "key": "sem",
+        "label": "Semifinales"
       }
     ]
   },
@@ -1637,6 +1641,36 @@
       "estadio": "Estadio Kansas City · Kansas City",
       "local": "Argentina",
       "visitante": "Suiza",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 101,
+      "fase": "sem",
+      "fase_label": "Semifinales",
+      "grupo": "Semifinales",
+      "fecha": "Mar 14 Jul",
+      "fecha_iso": "2026-07-14",
+      "hora": "18:00",
+      "estadio": "Estadio Dallas · Dallas",
+      "local": "Francia",
+      "visitante": "España",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 102,
+      "fase": "sem",
+      "fase_label": "Semifinales",
+      "grupo": "Semifinales",
+      "fecha": "Mié 15 Jul",
+      "fecha_iso": "2026-07-15",
+      "hora": "18:00",
+      "estadio": "Estadio Atlanta · Atlanta",
+      "local": "Inglaterra",
+      "visitante": "Argentina",
       "gol_local": null,
       "gol_visit": null,
       "jugado": false
@@ -21067,6 +21101,396 @@
           "nombre": "Daniela",
           "local": 2,
           "visitante": 2,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 101,
+      "fase": "sem",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Pepin",
+          "local": 2,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Abui",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Pepe",
+          "local": 2,
+          "visitante": 3,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Clau",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Pau",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Alvaro DTA",
+          "local": 1,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Diego",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Rodrigo Casanueva Andrade primero de su nombre",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Anto",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Raul",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "María",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Cava",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Amaya",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ema",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alvaro RC",
+          "local": 3,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Andrea R",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Pablo",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Iker",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Mica",
+          "local": 2,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Kiko",
+          "local": 3,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Peyotinho",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 22,
+          "nombre": "Almu",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 23,
+          "nombre": "Ana CP",
+          "local": 3,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 24,
+          "nombre": "Charger Diabólico + Diego",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 25,
+          "nombre": "Maite C",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 26,
+          "nombre": "Ángel CC",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 27,
+          "nombre": "Daniela",
+          "local": 3,
+          "visitante": 2,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 102,
+      "fase": "sem",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Pepin",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Abui",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Pepe",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Clau",
+          "local": 2,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Pau",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Alvaro DTA",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Diego",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Rodrigo Casanueva Andrade primero de su nombre",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Anto",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Raul",
+          "local": 1,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "María",
+          "local": 3,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Cava",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Amaya",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ema",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alvaro RC",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Andrea R",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Pablo",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Iker",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Mica",
+          "local": 3,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Kiko",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Peyotinho",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 22,
+          "nombre": "Almu",
+          "local": 1,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 23,
+          "nombre": "Ana CP",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 24,
+          "nombre": "Charger Diabólico + Diego",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 25,
+          "nombre": "Maite C",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 26,
+          "nombre": "Ángel CC",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 27,
+          "nombre": "Daniela",
+          "local": 2,
+          "visitante": 1,
           "pts": null
         }
       ]
